@@ -1,16 +1,49 @@
-# React + Vite
+# DevQuest
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dashboard de DevQuest, una app para aprender programación con lecciones cortas, trivias y puzzles de código.
 
-Currently, two official plugins are available:
+Hecho con [React](https://react.dev) y [Vite](https://vite.dev).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Qué incluye
 
-## React Compiler
+- **Estadísticas**: puntaje, racha actual, mejor racha y lecciones completadas.
+- **Aviso para usuarios nuevos**: si todas las estadísticas están en 0, invita a jugar la primera trivia.
+- **Aprender por lenguaje**: tarjeta destacada con los lenguajes disponibles.
+- **Modo rápido**: acceso directo a Trivia y Puzzles de código.
+- **Progreso por lenguaje** y **actividad reciente**.
+- Diseño responsive (las columnas se apilan en pantallas de menos de 640px) y enlaces accesibles con `aria-label` y foco visible.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Empezar
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+La app queda en http://localhost:5173.
+
+## Scripts
+
+| Comando           | Qué hace                                     |
+| ----------------- | -------------------------------------------- |
+| `npm run dev`     | Servidor de desarrollo con recarga en vivo    |
+| `npm run build`   | Genera la versión de producción en `dist/`    |
+| `npm run preview` | Sirve la versión de producción localmente     |
+| `npm run lint`    | Revisa el código con oxlint                   |
+
+## Estructura
+
+```
+src/
+  App.jsx    Dashboard y sus datos
+  index.css  Estilos y variables de color
+  main.jsx   Punto de entrada
+```
+
+## Pendiente
+
+Por ahora es solo la parte visual:
+
+- Los datos (usuario, puntajes, progreso) están fijos al principio de `src/App.jsx`.
+- Las rutas `/learn`, `/trivia`, `/puzzle`, `/perfil` y `/ranking` todavía no existen.
+- "Cerrar sesión" no tiene lógica.
